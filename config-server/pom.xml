@@ -12,16 +12,13 @@
 	<description>Spring Cloud Config Server sample</description>
 
 	<parent>
-		<groupId>org.springframework.cloud</groupId>
-		<artifactId>spring-cloud-starter-parent</artifactId>
-		<version>Camden.SR2</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<artifactId>microservice-sample</artifactId>
+		<groupId>br.com.mews</groupId>
+		<version>1.0.0</version>
 	</parent>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<start-class>Application</start-class>
-		<java.version>1.8</java.version>
+		<start-class>br.com.mews.Application</start-class>
 	</properties>
 
 	<dependencies>
@@ -44,14 +41,5 @@
 	    </dependency>
 
 	</dependencies>
-	
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
 
 </project>

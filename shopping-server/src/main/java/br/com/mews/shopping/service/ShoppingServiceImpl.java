@@ -27,7 +27,7 @@ public class ShoppingServiceImpl implements ShoppingService {
 	public String getShoppingInfo() {
 		String shoppingInfo = "There was a problem assembling the sentence!";
 		shoppingInfo =
-			String.format("%s %s %s %s %s.",
+			String.format("%s %s %s %s .",
 					productClient.getProduct(),
 					cartClient.getCart(),
 					accountClient.getAccount(),
