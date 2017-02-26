@@ -17,6 +17,7 @@
         <module>order-server</module>
         <module>cart-server</module>
         <module>shopping-server</module>
+        <module>gateway</module>
     </modules>
 
     <properties>

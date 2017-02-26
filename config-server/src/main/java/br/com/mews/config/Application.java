@@ -1,4 +1,4 @@
-package br.com.mews;
+package br.com.mews.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

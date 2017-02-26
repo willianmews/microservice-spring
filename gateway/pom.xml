@@ -4,12 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>br.com.mews</groupId>
-	<artifactId>common-config-server</artifactId>
+	<artifactId>gateway</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>common-config-server</name>
-	<description>Spring Cloud Config Server sample</description>
+	<name>gateway</name>
 
 	<parent>
 		<artifactId>microservice-sample</artifactId>
@@ -18,14 +17,26 @@
 	</parent>
 
 	<properties>
-		<start-class>br.com.mews.config.Application</start-class>
+		<start-class>br.com.mews.gateway.Application</start-class>
 	</properties>
 
 	<dependencies>
+	
+		<!-- Needed since 1.0.2 -->
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-config-server</artifactId>
-		</dependency>
+        	<groupId>org.springframework.cloud</groupId>
+        	<artifactId>spring-cloud-starter-config</artifactId>
+    	</dependency>
+
+	    <dependency>
+	        <groupId>org.springframework.cloud</groupId>
+	        <artifactId>spring-cloud-starter-eureka</artifactId>
+	    </dependency>
+	
+	    <dependency>
+	        <groupId>org.springframework.cloud</groupId>
+	        <artifactId>spring-cloud-starter-zuul</artifactId>
+	    </dependency>
 		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -39,7 +50,6 @@
 	        <artifactId>spring-boot-devtools</artifactId>
 	        <optional>true</optional>
 	    </dependency>
-
 	</dependencies>
 
 </project>
