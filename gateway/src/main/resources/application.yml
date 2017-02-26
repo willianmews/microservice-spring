@@ -1,0 +1,13 @@
+---
+
+zuul:
+  prefix: /api
+  routes:
+    account:
+      path: /acccount/**
+    cart:
+      path: /cart/**
+    order:
+      path: /order/**
+    product:
+      path: /product/**
