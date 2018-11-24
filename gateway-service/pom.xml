@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>br.com.mews</groupId>
-	<artifactId>discovery-service</artifactId>
+	<artifactId>gateway-service</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>common-discovery-service</name>
-	<description>Spring cloud discovery service</description>
+	<name>gateway-service</name>
+	<description>Gateway service</description>
 
 	<parent>
 		<artifactId>microservice-sample</artifactId>
@@ -19,14 +19,29 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<start-class>br.com.mews.discovery.Application</start-class>
+		<start-class>br.com.mews.gateway.Application</start-class>
 		<java.version>1.8</java.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-zuul</artifactId>
 		</dependency>
 
 		<dependency>
@@ -35,7 +50,6 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- Allow for automatic restarts when classpath contents change. -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
